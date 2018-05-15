@@ -1,0 +1,12 @@
+---
+# tasks file for role_openshift_secrets_management
+
+# Generate secrets
+- name: Generate secrets by provider
+  include_tasks: secrets.yml
+  with_items: secrets
+
+# Gather secrets to create
+- name: Manage secrets by product
+  include_tasks: products.yml
+  with_items: generated_secrets

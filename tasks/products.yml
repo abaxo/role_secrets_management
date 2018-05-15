@@ -1,0 +1,8 @@
+---
+- name: Manage Openshift secrets
+  include_tasks: products/openshift/main.yml
+  when: manage_openshift|bool == true
+
+- name: Manage Jenkins secrets
+  include_tasks: products/jenkins/main.yml
+  when: manage_jenkins|bool == true

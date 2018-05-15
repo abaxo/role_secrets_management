@@ -1,0 +1,6 @@
+---
+# Manage Dynamic secrets
+
+- name: Generate Password
+  shell: echo $( openssl rand -base64 32 | tr -d -c "a-zA-Z0-9" | head -c 12 )
+  register: generated_secret

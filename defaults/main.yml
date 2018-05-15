@@ -1,0 +1,4 @@
+---
+# defaults file for role_openshift_secrets_management
+manage_openshift: false
+manage_jenkins: false

@@ -1,0 +1,22 @@
+---
+# vars file for role_openshift_secrets_management
+
+- secrets:
+  - name: test_secret
+    type: dynamic
+    deploy_to:
+      - product: openshift
+        namespace: zzz-testing
+      - product: jenkins
+        namespace: zzz-testing 
+        
+  - name: another_test
+    type: dynamic
+    deploy_to:
+      - product: jenkins
+        namespace: zzz-testing 
+
+
+- secrets_dynamic_provider_enabled: true
+
+- secrets_rh-idm_provider_enabled: false
